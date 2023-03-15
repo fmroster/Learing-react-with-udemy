@@ -1,7 +1,6 @@
-import { useState } from 'react'
 import './Animal.css'
 
-function AnimalShow ({type}){
+function ImageShow ({image}){
     // const [clicks , setClicks] = useState(0);
 
     // const handleClick =()=>{
@@ -9,9 +8,11 @@ function AnimalShow ({type}){
     // }
     return(
         <div className="card" >
-
+          
+            <img src={image.urls.small} alt={image.description} />
+            <p>{image.description}</p>
         </div>
     )
 }
 
-export default AnimalShow
+export default ImageShow

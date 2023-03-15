@@ -1,16 +1,19 @@
 import {useState} from "react"
 import './App.css'
-
+import SearchBar from './component/SearchBar'
+import ImageList from './component/ImageList'
+import searchImages from './api'
 function App() {
-  const [animals, setAnimals]  = useState([]);
-    const handdleClick = ()=>{
-      
-    }
- 
+  const [images, setImages] = useState([])
+
+  const handleSubmit = async (term)=>{
+  const result = await searchImages(term)
+  setImages(result)
+}
   return (
     <div>
-       {/* <AnimalShow title="animal show"/> */}
-       <button>secra</button>
+       <SearchBar onSubmit={handleSubmit}/>
+       <ImageList images={images}/>
     </div>
     )
 }

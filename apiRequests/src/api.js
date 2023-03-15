@@ -7,7 +7,7 @@ const searchImages = async (term)=> {
         headers:{
             Authorization: 'Client-ID mGeC0mFvBBwgeszL3wl0rBH_DOXdf7wLQ3XYZfI7cwI'
         },params:{
-            query: term
+            query: "term"
         }
     })
 
